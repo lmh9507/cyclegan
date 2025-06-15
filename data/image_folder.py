@@ -32,7 +32,7 @@ def make_dataset(dir, max_dataset_size=float("inf"), phase='train'):
     if phase == 'train':
         images = images[:int(0.7 * len(images))]
     elif phase == 'test':
-        images = images[:int(0.7 * len(images)):]
+        images = images[int(0.7 * len(images)):]
     return images[:min(max_dataset_size, len(images))]
 
 
